@@ -1,0 +1,18 @@
+[project]
+name = "eeg-classification"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "einops>=0.8.1",
+    "matplotlib>=3.10.5",
+    "mne>=1.10.1",
+    "numpy>=2.3.2",
+    "pandas>=2.3.2",
+    "pyedflib>=0.1.42",
+    "pytorch-lightning>=2.5.4",
+    "scikit-learn>=1.7.1",
+    "scipy>=1.16.1",
+    "torch>=2.8.0",
+]
