@@ -1,0 +1,19 @@
+sampling: 256
+window_sec: 2
+hop_sec: 1
+bands:
+delta: [1, 4]
+theta: [4, 8]
+alpha: [8, 13]
+beta: [13, 30]
+gamma: [30, 45]
+cnn_lstm:
+cnn_channels: 64
+lstm_hidden: 128
+lstm_layers: 2
+dropout: 0.3
+training:
+batch_size: 64
+lr: 1e-3
+weight_decay: 1e-4
+epochs: 100
