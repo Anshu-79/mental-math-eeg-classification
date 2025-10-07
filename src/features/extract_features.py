@@ -6,9 +6,17 @@ import argparse
 import os
 import numpy as np
 import pandas as pd
+import logging
 from glob import glob
 from scipy.signal import welch
 from scipy.stats import entropy
+
+# ---------------- Logging Setup ---------------- #
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
 
 
 def bandpower(data, sfreq, band):
@@ -60,33 +68,38 @@ if __name__ == "__main__":
     parser.add_argument("--out", required=True)
     args = parser.parse_args()
 
+    bands = {
+        "delta": (1, 4),
+        "theta": (4, 8),
+        "alpha": (8, 13),
+        "beta": (13, 30),
+        "gamma": (30, 45),
+    }
 
-bands = {
-    "delta": (1, 4),
-    "theta": (4, 8),
-    "alpha": (8, 13),
-    "beta": (13, 30),
-    "gamma": (30, 45),
-}
+    rows = []
+    file_list = sorted(glob(os.path.join(args.indir, "*.npz")))
+    logging.info(f"Found {len(file_list)} input files in {args.indir}")
 
+    for fpath in file_list:
+        logging.info(f"Processing file: {os.path.basename(fpath)}")
+        dat = np.load(fpath, allow_pickle=True)
+        windows, sfreq, chs = dat["windows"], float(dat["sfreq"]), dat["channels"]
+        subj_cond = os.path.basename(fpath).replace(".npz", "")
+        subj, cond = subj_cond.split("_", 1)
 
-rows = []
-for fpath in sorted(glob(os.path.join(args.indir, "*.npz"))):
-    dat = np.load(fpath, allow_pickle=True)
-    windows, sfreq, chs = dat["windows"], float(dat["sfreq"]), dat["channels"]
-    subj_cond = os.path.basename(fpath).replace(".npz", "")
-    subj, cond = subj_cond.split("_", 1)
-    for i, win in enumerate(windows):
-        # average features across channels
-        ch_feats = [
-            extract_features_from_window(win[ch], sfreq, bands)
-            for ch in range(win.shape[0])
-        ]
-        avg_feats = {k: np.mean([cf[k] for cf in ch_feats]) for k in ch_feats[0].keys()}
-        avg_feats.update({"subject": subj, "condition": cond, "window": i})
-        rows.append(avg_feats)
+        logging.debug(f"Subject: {subj}, Condition: {cond}, Windows: {len(windows)}")
 
+        for i, win in enumerate(windows):
+            ch_feats = [
+                extract_features_from_window(win[ch], sfreq, bands)
+                for ch in range(win.shape[0])
+            ]
+            avg_feats = {
+                k: np.mean([cf[k] for cf in ch_feats]) for k in ch_feats[0].keys()
+            }
+            avg_feats.update({"subject": subj, "condition": cond, "window": i})
+            rows.append(avg_feats)
 
-df = pd.DataFrame(rows)
-df.to_csv(args.out, index=False)
-print(f"Wrote {len(df)} rows to {args.out}")
+    df = pd.DataFrame(rows)
+    df.to_csv(args.out, index=False)
+    logging.info(f"Wrote {len(df)} rows to {args.out}")
