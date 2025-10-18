@@ -15,6 +15,8 @@ sys.path.append(os.path.abspath("."))
 from src.data.feature_dataset import EEGFeatureDataset
 from src.models.transformer_model import EEGTransformer
 from src.utils.metrics import window_metrics, aggregate_by_file
+from sklearn.metrics import accuracy_score, f1_score, roc_auc_score, matthews_corrcoef
+
 
 # ----------------------------
 # Logging
@@ -257,39 +259,42 @@ def main():
         )
 
     # Save CSVs
-    out_csv = os.path.join(args.out_dir, "transformer_results.csv")
+    out_csv = os.path.join(args.out_dir, "transformer_results/transformer_results.csv")
     pd.DataFrame(all_fold_rows).to_csv(out_csv, index=False)
     logging.info(f"Saved per-fold results to {out_csv}")
 
     # Summary
     file_rows = pd.DataFrame(all_fold_rows)
     file_rows = file_rows[file_rows["eval_unit"] == "file"]
-    # Map targets from 1/2 -> 0/1
-    y_true = file_rows["target"].values - 1  # 1->0, 2->1
+
+    # Ensure targets are integers and in 0/1
+    y_true = file_rows["target"].astype(int).values
     y_prob = file_rows["prob"].values
     y_pred = (y_prob >= 0.5).astype(int)
-    from sklearn.metrics import (
-        accuracy_score,
-        f1_score,
-        roc_auc_score,
-        matthews_corrcoef,
-    )
 
-    auc = roc_auc_score(y_true, y_prob) if len(np.unique(y_true)) > 1 else np.nan
+
+    # Handle edge case where only one class is present
+    if len(np.unique(y_true)) > 1:
+        auc = roc_auc_score(y_true, y_prob)
+    else:
+        auc = float("nan")
+
+    if len(np.unique(y_pred)) > 1:
+        mcc = matthews_corrcoef(y_true, y_pred)
+    else:
+        mcc = 0.0
+
     summary = pd.DataFrame(
         [
             {
                 "acc": accuracy_score(y_true, y_pred),
                 "f1": f1_score(y_true, y_pred, zero_division=0),
                 "roc_auc": auc,
-                "mcc": (
-                    matthews_corrcoef(y_true, y_pred)
-                    if len(np.unique(y_pred)) > 1
-                    else 0.0
-                ),
+                "mcc": mcc,
             }
         ]
     )
+
     summary_csv = os.path.join(args.out_dir, "transformer_summary.csv")
     summary.to_csv(summary_csv, index=False)
     logging.info(f"Saved summary to {summary_csv}")

@@ -1,0 +1,74 @@
+2025-10-08 23:59:58,151 [INFO] Found 36 trained fold models to evaluate.
+2025-10-08 23:59:58,154 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold10_best.pt
+2025-10-08 23:59:58,155 [WARNING] ❌ Missing data for fold10, skipping.
+2025-10-08 23:59:58,156 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold11_best.pt
+2025-10-08 23:59:58,156 [WARNING] ❌ Missing data for fold11, skipping.
+2025-10-08 23:59:58,157 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold12_best.pt
+2025-10-08 23:59:58,158 [WARNING] ❌ Missing data for fold12, skipping.
+2025-10-08 23:59:58,158 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold13_best.pt
+2025-10-08 23:59:58,158 [WARNING] ❌ Missing data for fold13, skipping.
+2025-10-08 23:59:58,159 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold14_best.pt
+2025-10-08 23:59:58,159 [WARNING] ❌ Missing data for fold14, skipping.
+2025-10-08 23:59:58,160 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold15_best.pt
+2025-10-08 23:59:58,160 [WARNING] ❌ Missing data for fold15, skipping.
+2025-10-08 23:59:58,161 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold16_best.pt
+2025-10-08 23:59:58,161 [WARNING] ❌ Missing data for fold16, skipping.
+2025-10-08 23:59:58,162 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold17_best.pt
+2025-10-08 23:59:58,162 [WARNING] ❌ Missing data for fold17, skipping.
+2025-10-08 23:59:58,164 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold18_best.pt
+2025-10-08 23:59:58,164 [WARNING] ❌ Missing data for fold18, skipping.
+2025-10-08 23:59:58,164 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold19_best.pt
+2025-10-08 23:59:58,165 [WARNING] ❌ Missing data for fold19, skipping.
+2025-10-08 23:59:58,165 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold1_best.pt
+2025-10-08 23:59:58,166 [WARNING] ❌ Missing data for fold1, skipping.
+2025-10-08 23:59:58,166 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold20_best.pt
+2025-10-08 23:59:58,168 [WARNING] ❌ Missing data for fold20, skipping.
+2025-10-08 23:59:58,168 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold21_best.pt
+2025-10-08 23:59:58,168 [WARNING] ❌ Missing data for fold21, skipping.
+2025-10-08 23:59:58,169 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold22_best.pt
+2025-10-08 23:59:58,169 [WARNING] ❌ Missing data for fold22, skipping.
+2025-10-08 23:59:58,169 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold23_best.pt
+2025-10-08 23:59:58,170 [WARNING] ❌ Missing data for fold23, skipping.
+2025-10-08 23:59:58,170 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold24_best.pt
+2025-10-08 23:59:58,171 [WARNING] ❌ Missing data for fold24, skipping.
+2025-10-08 23:59:58,171 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold25_best.pt
+2025-10-08 23:59:58,171 [WARNING] ❌ Missing data for fold25, skipping.
+2025-10-08 23:59:58,172 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold26_best.pt
+2025-10-08 23:59:58,172 [WARNING] ❌ Missing data for fold26, skipping.
+2025-10-08 23:59:58,173 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold27_best.pt
+2025-10-08 23:59:58,173 [WARNING] ❌ Missing data for fold27, skipping.
+2025-10-08 23:59:58,173 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold28_best.pt
+2025-10-08 23:59:58,174 [WARNING] ❌ Missing data for fold28, skipping.
+2025-10-08 23:59:58,174 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold29_best.pt
+2025-10-08 23:59:58,175 [WARNING] ❌ Missing data for fold29, skipping.
+2025-10-08 23:59:58,176 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold2_best.pt
+2025-10-08 23:59:58,177 [WARNING] ❌ Missing data for fold2, skipping.
+2025-10-08 23:59:58,178 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold30_best.pt
+2025-10-08 23:59:58,178 [WARNING] ❌ Missing data for fold30, skipping.
+2025-10-08 23:59:58,178 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold31_best.pt
+2025-10-08 23:59:58,179 [WARNING] ❌ Missing data for fold31, skipping.
+2025-10-08 23:59:58,179 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold32_best.pt
+2025-10-08 23:59:58,180 [WARNING] ❌ Missing data for fold32, skipping.
+2025-10-08 23:59:58,180 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold33_best.pt
+2025-10-08 23:59:58,181 [WARNING] ❌ Missing data for fold33, skipping.
+2025-10-08 23:59:58,181 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold34_best.pt
+2025-10-08 23:59:58,182 [WARNING] ❌ Missing data for fold34, skipping.
+2025-10-08 23:59:58,182 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold35_best.pt
+2025-10-08 23:59:58,183 [WARNING] ❌ Missing data for fold35, skipping.
+2025-10-08 23:59:58,183 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold36_best.pt
+2025-10-08 23:59:58,184 [WARNING] ❌ Missing data for fold36, skipping.
+2025-10-08 23:59:58,184 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold3_best.pt
+2025-10-08 23:59:58,185 [WARNING] ❌ Missing data for fold3, skipping.
+2025-10-08 23:59:58,185 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold4_best.pt
+2025-10-08 23:59:58,186 [WARNING] ❌ Missing data for fold4, skipping.
+2025-10-08 23:59:58,186 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold5_best.pt
+2025-10-08 23:59:58,187 [WARNING] ❌ Missing data for fold5, skipping.
+2025-10-08 23:59:58,187 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold6_best.pt
+2025-10-08 23:59:58,188 [WARNING] ❌ Missing data for fold6, skipping.
+2025-10-08 23:59:58,188 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold7_best.pt
+2025-10-08 23:59:58,188 [WARNING] ❌ Missing data for fold7, skipping.
+2025-10-08 23:59:58,188 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold8_best.pt
+2025-10-08 23:59:58,189 [WARNING] ❌ Missing data for fold8, skipping.
+2025-10-08 23:59:58,189 [INFO] 🔹 Evaluating reports\\5s_windows\\transformer\\checkpoints_transformer\fold9_best.pt
+2025-10-08 23:59:58,189 [WARNING] ❌ Missing data for fold9, skipping.
+2025-10-08 23:59:58,191 [ERROR] ❌ No metrics computed — check data/model file alignment!

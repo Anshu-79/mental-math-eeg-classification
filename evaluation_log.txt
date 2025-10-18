@@ -1,0 +1,4 @@
+2025-10-09 05:38:25,807 [INFO] Loading window data from data/derivatives/5s_windows
+2025-10-09 05:38:51,033 [INFO] Loaded 1707 windows from 36 subjects.
+2025-10-09 05:38:51,034 [INFO] Found 36 trained fold models to evaluate.
+2025-10-09 05:38:51,155 [WARNING] [Fold 10] Checkpoint expects 11 features. Proceeding with flexible load.
